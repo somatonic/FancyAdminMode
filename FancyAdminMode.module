@@ -42,6 +42,7 @@ class FancyAdminMode extends WireData implements Module {
     public function addModal($event){
         if(!isset($_GET['modal'])
                 && ("/" . $_GET['it'] != $this->config->urls->admin . "page/")
+                && ("/" . $_GET['it'] != $this->config->urls->admin)
                 && (strpos($_GET['it'], ltrim($this->config->urls->admin,"/") . "page/search/") === false )
                 && (strpos($_GET['it'], ltrim($this->config->urls->admin,"/") . "page/list/") === false )
                 && (strpos($_GET['it'], ltrim($this->config->urls->admin,"/") . "profile/") === false )){
